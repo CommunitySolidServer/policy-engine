@@ -1,0 +1,3 @@
+# Solid Authorization Evaluator
+
+TODO
