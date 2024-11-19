@@ -1,0 +1,23 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/policy-engine/^7.0.0/components/context.jsonld",
+  "@graph": [
+    {
+      "@id": "urn:solidlab:policy-engine:AcpManager",
+      "@type": "ManagedAcpRepository",
+      "manager": "urn:solidlab:policy-engine:AuthorizationManager"
+    },
+
+    {
+      "@id": "urn:solidlab:policy-engine:AcpPolicyEngine",
+      "@type": "AcpPolicyEngine",
+      "repository": { "@id": "urn:solidlab:policy-engine:AcpManager" }
+    },
+
+    {
+      "@id": "urn:solidlab:policy-engine:PolicyEngine",
+      "@type": "AclPermissionsEngine",
+      "engine": { "@id": "urn:solidlab:policy-engine:AcpPolicyEngine" },
+      "manager": { "@id": "urn:solidlab:policy-engine:AuthorizationManager" }
+    }
+  ]
+}

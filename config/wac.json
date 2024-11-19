@@ -1,0 +1,39 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/policy-engine/^7.0.0/components/context.jsonld",
+  "import": [
+    "sae:config/access-checkers/agent.json",
+    "sae:config/access-checkers/agent-class.json",
+    "sae:config/access-checkers/agent-group.json"
+  ],
+  "@graph": [
+    {
+      "@id": "urn:solidlab:policy-engine:WacManager",
+      "@type": "ManagedWacRepository",
+      "manager": "urn:solidlab:policy-engine:AuthorizationManager"
+    },
+
+    {
+      "@id": "urn:solidlab:policy-engine:AccessChecker",
+      "@type": "UnionAccessChecker",
+      "handlers": [
+        { "@id": "urn:solidlab:policy-engine:AgentAccessChecker" },
+        { "@id": "urn:solidlab:policy-engine:AgentClassAccessChecker" },
+        { "@id": "urn:solidlab:policy-engine:AgentGroupAccessChecker" }
+      ]
+    },
+
+    {
+      "@id": "urn:solidlab:policy-engine:WacPolicyEngine",
+      "@type": "WacPolicyEngine",
+      "accessChecker": { "@id": "urn:solidlab:policy-engine:AccessChecker" },
+      "repository": { "@id": "urn:solidlab:policy-engine:WacManager" }
+    },
+
+    {
+      "@id": "urn:solidlab:policy-engine:PolicyEngine",
+      "@type": "AclPermissionsEngine",
+      "engine": { "@id": "urn:solidlab:policy-engine:WacPolicyEngine" },
+      "manager": { "@id": "urn:solidlab:policy-engine:AuthorizationManager" }
+    }
+  ]
+}

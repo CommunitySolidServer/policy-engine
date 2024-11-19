@@ -1,0 +1,10 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/policy-engine/^0.0.0/components/context.jsonld",
+  "@graph": [
+    {
+      "comment": "Checks if the agent belongs to a group that has access.",
+      "@id": "urn:solidlab:policy-engine:AgentGroupAccessChecker",
+      "@type": "AgentGroupAccessChecker"
+    }
+  ]
+}
