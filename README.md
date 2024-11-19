@@ -1,5 +1,7 @@
 # Solid Policy Engine
 
+![NPM Version](https://img.shields.io/npm/v/%40solidlab%2Fpolicy-engine)
+
 This package provides support for both [Web Access Control](https://solidproject.org/TR/2021/wac-20210711)(WAC)
 and [Access Control Policies](https://solid.github.io/authorization-panel/acp-specification/)(ACP) authorization.
 
