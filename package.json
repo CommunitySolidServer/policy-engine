@@ -33,10 +33,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@rdfjs/fetch": "^2.1.0",
+    "@rdfjs/fetch": "^3.1.1",
     "@rdfjs/types": "^1.1.0",
     "@types/n3": "^1.21.0",
-    "@types/rdfjs__fetch": "^2.0.3",
+    "@types/rdfjs__fetch": "^3.0.7",
     "asynchronous-handlers": "^1.0.2",
     "global-logger-factory": "^1.0.0",
     "n3": "^1.21.1",
