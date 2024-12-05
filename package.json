@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "npm run build:ts && npm run build:components",
-    "build:components": "componentsjs-generator -s src -c dist/components -i .componentsignore -r sae",
+    "build:components": "componentsjs-generator -s src -c dist/components -i .componentsignore -r spe",
     "build:ts": "tsc",
     "lint": "npm run lint:eslint && npm run lint:markdown",
     "lint:fix": "npm run lint:eslint:fix && npm run lint:markdown:fix",

@@ -1,15 +1,15 @@
 {
-  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/policy-engine/^7.0.0/components/context.jsonld",
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solidlab/policy-engine/^0.0.0/components/context.jsonld",
   "import": [
-    "sae:config/access-checkers/agent.json",
-    "sae:config/access-checkers/agent-class.json",
-    "sae:config/access-checkers/agent-group.json"
+    "spe:config/access-checkers/agent.json",
+    "spe:config/access-checkers/agent-class.json",
+    "spe:config/access-checkers/agent-group.json"
   ],
   "@graph": [
     {
       "@id": "urn:solidlab:policy-engine:WacManager",
       "@type": "ManagedWacRepository",
-      "manager": "urn:solidlab:policy-engine:AuthorizationManager"
+      "manager": { "@id": "urn:solidlab:policy-engine:AuthorizationManager" }
     },
 
     {
