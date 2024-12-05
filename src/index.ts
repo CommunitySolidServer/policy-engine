@@ -1,3 +1,4 @@
+export * from './acp/Acp';
 export * from './acp/AcpEvalUtil';
 export * from './acp/AcpParseUtil';
 export * from './acp/AcpPolicyEngine';
@@ -10,6 +11,7 @@ export * from './wac/access/AccessChecker';
 export * from './wac/access/AgentAccessChecker';
 export * from './wac/access/AgentClassAccessChecker';
 export * from './wac/access/AgentGroupAccessChecker';
+export * from './wac/access/UnionAccessChecker';
 
 export * from './wac/ManagedWacRepository';
 export * from './wac/WacAuthorization';
