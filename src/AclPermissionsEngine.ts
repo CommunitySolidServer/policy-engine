@@ -9,7 +9,7 @@ import { ACL, PERMISSIONS, RDF, REPORT } from './Vocabularies';
 
 export const ACL_TRANSLATE_MAP: Record<string, { target: string; parent?: string }> = {
   [PERMISSIONS.Append]: { target: ACL.Append },
-  [PERMISSIONS.Create]: { target: ACL.Write, parent: ACL.Append },
+  [PERMISSIONS.Create]: { target: ACL.Append, parent: ACL.Append },
   [PERMISSIONS.Delete]: { target: ACL.Write, parent: ACL.Write },
   [PERMISSIONS.Modify]: { target: ACL.Write },
   [PERMISSIONS.Read]: { target: ACL.Read },
